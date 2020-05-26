@@ -1,0 +1,19 @@
+//https://www.instagram.com/p/B-31GagAuir/?utm_source=ig_web_copy_link
+#include <stdio.h>
+
+int main()
+{
+    int i,j,k=6,a[4]={1,5,7,1};
+    for(i=0;i<4;i++)
+    {
+    for(j=i+1;j<4;j++)
+    {
+     if(a[i]+a[j]==k)
+     {
+         printf("(%d,%d)",a[i],a[j]);
+     }
+    }
+    }
+    
+    
+}
