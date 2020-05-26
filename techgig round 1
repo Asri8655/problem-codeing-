@@ -1,0 +1,50 @@
+//https://www.techgig.com/codegladiators/question/aUs1eURrWWt4YThVWTVxZUxqR2ZKQ2FuN1ZsSE5ENWRNSHlMc3FHenVYV0hRS3FEVmlldFgyYWtDV012c0dmKw==/1?msg_type=1
+#include<stdio.h>
+int main(int argc,char *a[])
+{
+	int n;
+	int i,j,k,l;
+    scanf("%d",&n);
+    int c[n];
+    int b[n];
+    int s[n];
+    for (i=0;i<n;i++)
+    {
+        scanf("%d", &c[i]);
+    }
+     for (j=0;j<n;j++)
+   {
+        scanf("%d", &b[j]);
+   }
+    for (k=0;k<n;k++) 
+    {
+            s[k]=b[k]/c[k];
+             
+    }
+    for (l=1;l<n;l++) 
+    {
+      if (s[0]>s[l])
+            s[0]=s[l];
+    }
+    printf("%d",s[0]);
+}
+#include<stdio.h>
+#include<limits.h>
+int main(int argc,char* a[])
+{
+ unsigned  int n,i,j,k,l;
+    scanf("%d",&n);
+  int c[n],b[n],s[n];
+    for(i=0;i<n;i++)
+        scanf("%d", &c[i]);
+     for(j=0;j<n;j++)
+     scanf("%d", &b[j]);
+    for(k=0;k<n;k++) 
+            s[k]=b[k]/c[k];
+    for(l=1;l<n;l++) 
+      if (s[0]>s[l])
+            s[0]=s[l];
+    printf("%d",s[0]);
+}
+
+
