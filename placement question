@@ -1,0 +1,61 @@
+//David and jones are best friends. They are playing a game which contain three operation(Insert, Remove and Replace). David giving two strings str1 and str2 to Jones and saying that operations has to be performed on str1. Jones has to find the minimum number of edits (operations) required to convert ‘str1’ into ‘str2’.(For each operation the cost is 1).
+
+For Ex:
+
+Input:  str1 = "sunday", str2 = "saturday"
+
+Output: 3
+
+Last three and first characters are same. We basically need to convert "un" to "atur". This can be done using below three operations. 
+
+Replace 'n' with 'r', insert t, insert a
+
+Input format
+Enter the First string(Str1)
+Enter the Second string(Str2)
+
+
+Output format
+Display the minimum number of operation required to convert the String 1 as String 2
+
+Code constraints
+0 < length(str1,str2) < 100
+
+(lowercase alphabets are only allowed, special characters are not allowed)
+
+Sample testcases
+Input 1
+sunday
+saturday
+Output 1
+3
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[50],b[50];
+    int i,j,x=0;
+    scanf("%[^\n]",a);
+    scanf("%[^\n]",b);
+    for(i=1;i<=strlen(b);i++)
+    {
+     for(j=i+1;j<=strlen(a);j++)
+     {
+        if(b[i]==a[j])
+        {
+          x=strlen(b);
+          x--;
+        }
+     }
+    }
+    printf("%d",x);
+    
+}
